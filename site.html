@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeExplorer</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        background-image: url('https://lisboaaberta.cm-lisboa.pt/images/lisboa2.jpg');
+        background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+        background-position: center; /* Centraliza a imagem */
+        background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        .category {
+            margin-top: 20px;
+        }
+
+        .category h2 {
+            font-size: 22px;
+            color: #5d7c9e;
+            border-bottom: 2px solid #6e89a7;
+            padding-bottom: 5px;
+        }
+
+        .category ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .category ul li {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .category ul li:hover {
+            background-color: #f0f8ff;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="header">
+            <img src="https://cdn.discordapp.com/attachments/1297637582422671432/1327886753394327643/2c791ca7-b634-4227-87ce-b077db57f78b.jpg?ex=6784b268&is=678360e8&hm=4ef2eafc5c21121ef2a30c1be88823ae5c5942e2f6279e23a0718ff4c5a4df97&" style="width: 200px; height: 200px;"></h1>
+        </div>
+        <div class="content">
+            <h1>VibeExplorer</h1>
+    
+            <!-- Category: Bares -->
+            <div class="category">
+                <h2>🍹 Bares</h2>
+                <ul>
+                    <li>
+                        <strong>Park Bar</strong>:
+                        <br><em> A rooftop bar with stunning views of Lisbon.</em>
+                        <br><em>Type of music:</em> Chill-out, lounge music. 
+                        <br><em>Recommended for:</em> People who enjoy relaxed evenings with scenic views. 
+                        <br><em>Age group:</em> 25-40. 
+                        <br><em>Location:</em> Calçada do Combro, 58.
+                    </li>
+                    <li>
+                        <strong>Pensão Amor</strong>: 
+                        <br><em>A quirky bar with an artistic vibe and unique decor. </em>
+                        <br><em>Type of music:</em> Eclectic, jazz, and world music. 
+                        <br><em>Recommended for:</em> Adventurous and artistic personalities. 
+                        <br><em>Age group:</em> 20-40. 
+                        <br><em>Location:</em> Rua do Alecrim, 19.
+                    </li>
+                    <li>
+                        <strong>Red Frog</strong>: 
+                        <br><em>A hidden speakeasy bar with creative cocktails.</em> 
+                        <br><em>Type of music:</em> Smooth jazz and ambient music. 
+                        <br><em>Recommended for:</em> Cocktail enthusiasts and quiet conversations. 
+                        <br><em>Age group:</em> 30-50. 
+                        <br><em>Location:</em> Rua do Salitre, 5A.
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Category: Discotecas -->
+            <div class="category">
+                <h2>🎶 Discotecas</h2>
+                <ul>
+                    <li>
+                        <strong>Lux Frágil</strong>: 
+                        <br><em>Lisbon’s most famous nightclub, known for its cutting-edge electronic music. </em>
+                        <br><em>Type of music:</em> Electronic, house, and techno. 
+                        <br><em>Recommended for:</em> Dance music lovers. 
+                        <br><em>Age group:</em> 20-35. 
+                        <br><em>Location:</em> Avenida Infante Dom Henrique, Armazém A.
+                    </li>
+                    <li>
+                        <strong>MusicBox</strong>: 
+                        <br><em>A vibrant nightclub offering live music and DJ sets. </em>
+                        <br><em>Type of music:</em> Indie, rock, and electronic. 
+                        <br><em>Recommended for:</em> Music enthusiasts who enjoy intimate venues. 
+                        <br><em>Age group:</em> 20-40. 
+                        <br><em>Location:</em> Rua Nova do Carvalho, 24.
+                    </li>
+                    <li>
+                        <strong>Kremlin</strong>: 
+                        <br><em>A historic nightclub with a unique atmosphere. </em>
+                        <br><em>Type of music:</em> Deep house and techno. 
+                        <br><em>Recommended for:</em> Night owls who enjoy underground vibes. 
+                        <br><em>Age group:</em> 20-35. 
+                        <br><em>Location:</em> Escadinhas da Praia, 5.
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Category: Teatros -->
+            <div class="category">
+                <h2>🎭 Teatros</h2>
+                <ul>
+                    <li>
+                        <strong>Teatro Nacional D. Maria II</strong>: 
+                        <br><em>A historic theater in Rossio Square.</em>
+                        <br><em>Type of performances:</em> Classical and modern plays. 
+                        <br><em>Recommended for:</em> Culture and history lovers. 
+                        <br><em>Age group:</em> All ages. 
+                        <br><em>Location:</em> Praça Dom Pedro IV.
+                    </li>
+                    <li>
+                        <strong>Teatro da Trindade</strong>: 
+                        <br><em>A 19th-century theater with charm. </em>
+                        <br><em>Type of performances:</em> Musicals and plays. 
+                        <br><em>Recommended for:</em> Fans of theatrical performances. 
+                        <br><em>Age group:</em> 18+. 
+                        <br><em>Location:</em> Rua Nova da Trindade, 9.
+                    </li>
+                    <li>
+                        <strong>Teatro São Luiz</strong>: 
+                        <br><em>Known for diverse cultural events. </em>
+                        <br><em>Type of performances:</em> Drama, dance, and concerts. 
+                        <br><em>Recommended for:</em> Fans of varied arts. 
+                        <br><em>Age group:</em> All ages. 
+                        <br><em>Location:</em> Rua António Maria Cardoso, 38.
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Category: Parques -->
+            <div class="category">
+                <h2>🌳 Parques</h2>
+                <ul>
+                    <li>
+                        <strong>Parque Eduardo VII</strong>: 
+                        <br><em>A large park with panoramic views. </em>
+                        <br><em>Recommended for:</em> Walks, picnics, and relaxation. 
+                        <br><em>Age group:</em> All ages. 
+                        <br><em>Location:</em> Avenida da Liberdade.
+                    </li>
+                    <li>
+                        <strong>Jardim da Estrela</strong>: 
+                        <br><em> charming garden perfect for families. </em>
+                        <br><em>Recommended for:</em> Relaxing afternoons and family outings. 
+                        <br><em>Age group:</em> All ages. 
+                        <br><em>Location:</em> Praça da Estrela.
+                    </li>
+                    <li>
+                        <strong>Tapada das Necessidades</strong>: 
+                        <br><em>A hidden gem in the city. </em>
+                        <br><em>Recommended for:</em> Nature lovers seeking quiet spaces. 
+                        <br><em>Age group:</em> All ages. 
+                        <br><em>Location:</em> Calçada Necessidades.
+                    </li>
+                </ul>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Google Maps Script -->
+    <script>
+        function initMap() {
+            // Coordenadas de Lisboa
+            const lisbon = { lat: 38.7169, lng: -9.139 };
+
+            // Criação do mapa
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: lisbon,
+            });
+
+            // Locais com coordenadas
+            const locations = [
+                { name: "Park Bar", position: { lat: 38.7138, lng: -9.1452 } },
+                { name: "Pensão Amor", position: { lat: 38.7079, lng: -9.1444 } },
+                { name: "Red Frog", position: { lat: 38.7209, lng: -9.1525 } },
+                { name: "Lux Frágil", position: { lat: 38.7493, lng: -9.1196 } },
+                { name: "MusicBox", position: { lat: 38.7071, lng: -9.1444 } },
+                { name: "Kremlin", position: { lat: 38.7137, lng: -9.1545 } },
+                { name: "Teatro Nacional D. Maria II", position: { lat: 38.7142, lng: -9.1405 } },
+                { name: "Teatro da Trindade", position: { lat: 38.7112, lng: -9.1415 } },
+                { name: "Teatro São Luiz", position: { lat: 38.7125, lng: -9.1441 } },
+                { name: "Parque Eduardo VII", position: { lat: 38.7286, lng: -9.1524 } },
+                { name: "Jardim da Estrela", position: { lat: 38.7131, lng: -9.1602 } },
+                { name: "Tapada das Necessidades", position: { lat: 38.7107, lng: -9.1658 } },
+            ];
+
+            // Adiciona marcadores ao mapa
+            locations.forEach((location) => {
+                new google.maps.Marker({
+                    position: location.position,
+                    map: map,
+                    title: location.name,
+                });
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyDOqtWpunmslfz4T2Iivkze5DrJfJPTg&callback=initMap" async defer></script>
+</body>
+</html>
